@@ -12,3 +12,14 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+function arrayLength() {
+  const array []
+  for (let i = 8; i <= 128; i++) {
+    array.push(i)
+  }
+  return array
+}
+
+const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90)
+const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122)
