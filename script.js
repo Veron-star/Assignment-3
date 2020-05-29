@@ -23,3 +23,15 @@ var r = p.concat(numberCharacters)
 for(var i=8; i<129; i++){
   console.log(possibleCharacters[Math.floor(Math.random()*possibleCharacters.length)]);
 }
+
+
+var confirmPasswordinput = confirm("Generate password?");
+
+      // Creates a prompt box which takes in text input.
+      var passwordType = prompt("Include special and number characters?");
+
+      // Alerts the output from our confirm box.
+      alert("You like sushi: " + confirmSushi);
+
+      // Alerts the output from our prompt box.
+      alert("You like " + sushiType + " sushi!");
