@@ -14,7 +14,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.textContent = password;
 
 // Possible password values
 let possibleCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
@@ -33,6 +33,8 @@ for(var i=8; i<129; i++){
   console.log(possibleCharacters[Math.floor(Math.random()*possibleCharacters.length)]);
 
 // Add password to text/display area
-document.getElementById("display").value = password;
+document.getElementById("display").textContent = password;
+
+return password;
 
 }}
