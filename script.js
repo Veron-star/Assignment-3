@@ -1,40 +1,31 @@
-// Creates a prompt box which takes in text input.
+var password = document.getElementById("#password");
+var generateBtn = document.getElementById("#generate");
 
-var password = prompt("Length of password");
-var possibleCharacters = prompt("Include special and number characters?");
 
-// Alerts the output from confirm box.
-
-if (length <8 || length >128) {
-alert("Possible characters: 8 - 128");
+var length = prompt("Length of password: 8 - 128 characters?");
+  if (length <8 || length >128){
+  alert("Password condition: between 8 - 128 characters. ")
 }
 
+var possibleCharacters = confirm("Include special and number characters?");
+
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+function generate() {
 
-  passwordText.textContent = password;
+var specialCharaters = ["!@#$%^&*()_+"]
+var numberCharacters = ["1234567890"]
+var possibleCharacters = ["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"]
 
-// Possible password values
-let possibleCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
+var password = possibleCharacters.concat(specialCharaters, numberCharacters);
 
-let password = "";
-
-var generateBtn = document.querySelector("#generate");
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-var p = possibleCharacters.concat(specialCharacters)
-var r = p.concat(numberCharacters)
-
-for(var i=8; i<129; i++){
-  console.log(possibleCharacters[Math.floor(Math.random()*possibleCharacters.length)]);
-
-// Add password to text/display area
-document.getElementById("display").textContent = password;
+for (var i = 8; i <= 128; i++) {
+  console.log(password[Math.floor((Math.random() * password.length))]);
+}
 
 return password;
 
-}}
+}
+
+// Add event listener to generate button
+document.getElementById("#generate").addEventListener("click", generateBtn);
+
