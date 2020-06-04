@@ -1,9 +1,9 @@
-Password Generator
+Secure Password Generator
 
 Created an application that generates random password based on selected criteria given using javascript. 
 
-Folder to HTML, CSS and Javascript:
-https://drive.google.com/drive/u/0/folders/1MRhK99CNMVm2hUKXnNGm3pNqFDMA-DO5
+
+https://veron-star.github.io/passwordgenerator/
 
 
 Github:
